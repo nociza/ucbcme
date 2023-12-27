@@ -15,16 +15,16 @@ const Home: NextPage = () => {
       <div className="absolute inset-0 mt-20">
         {/* Image from the public folder */}
         <Image
-          src="/background.jpg"
+          src="/background2.jpg"
           alt="UC Berkeley Chinese Music Ensemble"
           layout="fill"
           objectFit="cover"
           quality={100}
         />
       </div>
-      <section className="mt-10 relative">
-        <header className="relative z-10">
-          <h2 className="text-white font-serif font-light">
+      <section className="mt-70 relative flex justify-center items-center">
+        <header className="relative z-10 text-center">
+          <h1 className="text-white font-serif font-light">
             UC Berkeley Chinese Music Ensemble{" "}
             <div
               className="font-cursive"
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
             >
               伯克利民乐团
             </div>
-          </h2>
+          </h1>
         </header>
       </section>
 
