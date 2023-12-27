@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           quality={100}
         />
       </div>
-      <section className="mt-70 relative flex justify-center items-center">
+      <section className="mt-60 relative flex justify-center items-center">
         <header className="relative z-10 text-center">
           <h1 className="text-white font-serif font-light">
             UC Berkeley Chinese Music Ensemble{" "}
