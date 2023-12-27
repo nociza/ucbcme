@@ -3,4 +3,4 @@ Disallow: /air/*
 User-agent: *
 Allow: /
 
-Sitemap: https://www.youarerad.org/sitemap.xml
+Sitemap: https://www.ucbcme.org/sitemap.xml
