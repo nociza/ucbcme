@@ -58,12 +58,6 @@ export default function Footer() {
         </a>
         <a
           className="outline-none focus:ring-4 focus:ring-secondary-light rounded-xl"
-          href="https://www.twitch.tv/youarerad"
-        >
-          <TwitchIcon />
-        </a>
-        <a
-          className="outline-none focus:ring-4 focus:ring-secondary-light rounded-xl"
           href="https://twitter.com/YouAreRAD"
         >
           <Image
@@ -73,30 +67,6 @@ export default function Footer() {
             height={32}
           />
         </a>
-      </div>
-
-      <div className="text-center">
-        <Link href="https://vercel.com/home?utm_source=youarerad&utm_campaign=oss">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="overflow-hidden outline-none focus:border-4 focus:border-secondary-light rounded-xl"
-          >
-            <Image
-              src="https://res.cloudinary.com/df23ubjbb/image/upload/v1635261153/Vercel.svg"
-              alt="Click to check out Vercel"
-              width="200px"
-              height="50px"
-            />
-          </a>
-        </Link>
-        <div className="w-full mx-auto text-center">
-          <h5 className="text-xs">Rise Above The Disorder 2022 ©</h5>
-          <h5 className="text-xs">
-            <span className="block"> 501 (c)(3) public charity,</span>
-            <span className="block">EIN 46-2688472</span>
-          </h5>
-        </div>
       </div>
     </footer>
   );

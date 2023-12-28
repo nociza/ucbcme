@@ -109,16 +109,12 @@ export default function Navbar() {
                       leaveTo="opacity-0 -translate-y-1"
                     >
                       <Popover.Panel
-                        className="absolute inset-x-0 z-10 hidden transform bg-white shadow-lg top-full rounded-xl md:block"
+                        className="absolute inset-x-10 z-10 hidden transform bg-white shadow-lg top-full rounded-xl md:block"
                         static
                       >
-                        <div className="absolute inset-0 flex">
-                          <div className="w-1/2" />
-                          <div className="w-1/2 bg-secondary-light/10" />
-                        </div>
                         <div className="relative grid grid-cols-2 mx-auto">
                           <nav className="grid grid-cols-2 px-6 py-12 lg:px-8 xl:pr-12">
-                            <h3>Supporting RAD</h3>
+                            <h3>Contacting Us</h3>
                             <ul className="col-start-1 mt-5 space-y-6">
                               {supportPages.map((supportpage) => (
                                 <li
@@ -148,39 +144,12 @@ export default function Navbar() {
                               ))}
                             </ul>
                           </nav>
-                          <div className="px-6 py-12 lg:px-8 xl:pr-12">
-                            <h3>RAD Community</h3>
-                            <ul className="mt-5 space-y-6">
-                              {fundraisePages.map((fundraisepage) => (
-                                <li
-                                  key={fundraisepage.name}
-                                  className="flow-root"
-                                >
-                                  <Link href={fundraisepage.href} passHref>
-                                    <Popover.Button
-                                      as="a"
-                                      onClick={() => close()}
-                                      className="flex p-3 -m-3 rounded-md outline-none hover:bg-white focus:bg-white focus:ring-4 focus:ring-secondary-light"
-                                    >
-                                      <Image
-                                        width={200}
-                                        height={100}
-                                        objectFit="cover"
-                                        className="flex-shrink-0 rounded-md"
-                                        src={fundraisepage.image}
-                                        alt=""
-                                      />
-                                      <div className="flex-1 w-0 ml-8">
-                                        <h4 className="text-base font-medium">
-                                          {fundraisepage.name}
-                                        </h4>
-                                        <p>{fundraisepage.context}</p>
-                                      </div>
-                                    </Popover.Button>
-                                  </Link>
-                                </li>
-                              ))}
-                            </ul>
+                          <div className="col-start-2 rounded-r-lg">
+                            <img
+                              src="/background.jpg"
+                              alt="Image"
+                              className="w-full h-full object-cover rounded-r-lg"
+                            />
                           </div>
                         </div>
                       </Popover.Panel>
@@ -218,7 +187,7 @@ export default function Navbar() {
                         width={48}
                         height={48}
                         src="/bcme.svg"
-                        alt="Rise Above The Disorder logomark. A brain with a heart in the center."
+                        alt="BCME logo mark, a Pipa designed with the letters BCME."
                       />
                       <p className="text-3xl font-medium text-white cursor-pointer">
                         BCME
