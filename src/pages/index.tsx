@@ -42,35 +42,24 @@ const Home: NextPage = () => {
           <h2>About Us</h2>
         </header>
         <p>
-          Berkeley Chinese Music Ensemble is an extended Chinese orchestra...
-          (Include full description here)
+          Berkeley Chinese Music Ensemble is an extended Chinese orchestra that
+          plays music from Chinese composers who were active from the late 20th
+          century to today. The orchestra is united under one single vision,
+          that music and musicians from different cultures and backgrounds can
+          get together and create something new, something constructively
+          combining our past and present while actively embracing a future of
+          unlimited possibilities, all embodied in the audible interaction
+          throughout rehearsals, sectionals, and performances.
+          <br /> <br />
+          Working towards this goal, we do not strive to restore an abstract
+          perfection of “music” but rather to build and sustain a tangible
+          interaction among “musicians.” Instead of conforming to the
+          instrumentation of any existing Chinese orchestra, we want our
+          orchestra composition to reflect our student musician community here
+          at Cal; therefore, the sound we create together will be a statement of
+          who we are, weaving our trajectories from different cultural and
+          musical backgrounds into a beautiful landscape.
         </p>
-      </section>
-
-      {/* Program Notes Section */}
-      <section>
-        <header>
-          <h2>Program Notes</h2>
-        </header>
-        {/* Include detailed descriptions for each piece */}
-        <div>
-          <h3>Flying Dragon, Leaping Tiger</h3>
-          <p>Composed by Li Minxiong for percussion and orchestra...</p>
-          {/* Repeat for other pieces */}
-        </div>
-      </section>
-
-      {/* Soloist Bios Section */}
-      <section>
-        <header>
-          <h2>Soloist Bios</h2>
-        </header>
-        {/* Include bios for each soloist */}
-        <div>
-          <h3>Chun Xiao</h3>
-          <p>A seasoned Pipa performer and revered educator...</p>
-          {/* Repeat for other soloists */}
-        </div>
       </section>
 
       {/* Join Us Section */}
