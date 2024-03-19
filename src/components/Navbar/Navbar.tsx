@@ -233,7 +233,7 @@ export default function Navbar() {
                     <div>
                       <PrimaryButton
                         onClick={() => close()}
-                        buttonText="Donate Therapy"
+                        buttonText="Donate"
                         type="button"
                         as="a"
                       />
