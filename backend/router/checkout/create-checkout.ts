@@ -6,7 +6,7 @@ import { stripe } from "@libs/stripe";
 const ORIGIN_URL = "https://ucbcme.org" ?? "http://localhost:3000";
 
 export async function createOneTimeDonation(
-  priceId: number,
+  priceId: string,
   honor?: string,
   message?: string
 ) {
@@ -19,13 +19,8 @@ export async function createOneTimeDonation(
     payment_method_types: ["card", "us_bank_account"],
     line_items: [
       {
-        name: "Donation",
-        amount: priceId,
-        currency: "usd",
+        price: priceId,
         quantity: 1,
-        description: `Donation to Rise Above The Disorder, a 501(c)(3) non-profit organization${
-          ", " + honor
-        }. Thank you for supporting our mission to provide mental health care to everyone, everywhere!`,
       },
     ],
     success_url: `${ORIGIN_URL}/donationcomplete?session_id={CHECKOUT_SESSION_ID}`,
@@ -50,9 +45,6 @@ export async function createMonthlyDonation(
       {
         price: priceId,
         quantity: 1,
-        description: `Donation to Rise Above The Disorder, a 501(c)(3) non-profit organization${
-          ", " + honor
-        }. Thank you for supporting our mission to provide mental health care to everyone, everywhere!`,
       },
     ],
     success_url: `${ORIGIN_URL}/donationcomplete?session_id={CHECKOUT_SESSION_ID}`,

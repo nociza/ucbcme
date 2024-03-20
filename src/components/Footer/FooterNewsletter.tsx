@@ -42,7 +42,14 @@ export default function FooterNewsletter() {
       formRef.current?.setFieldError("email", "Invalid Email Address");
   };
   return (
-    <Form ref={formRef} onSubmit={handleSubmit} className="space-y-2">
+    <Form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      className="space-y-2"
+      placeholder=""
+      onPointerEnterCapture={() => {}}
+      onPointerLeaveCapture={() => {}}
+    >
       <Input name="email" variant="email" disabled={submit} />
       <button
         type="submit"

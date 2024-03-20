@@ -68,7 +68,7 @@ const Home: NextPage = () => {
           <h2>Join Us</h2>
         </header>
         <p>Information on how to join the ensemble, audition dates, etc.</p>
-        <Link href="/join">
+        <Link href="/join" legacyBehavior>
           <PrimaryButton type="button" buttonText="Apply to Join" />
         </Link>
       </section>
@@ -79,7 +79,7 @@ const Home: NextPage = () => {
           <h2>Support Our Music</h2>
         </header>
         <p>Details on how donations help the ensemble and ways to donate.</p>
-        <Link href="/donate">
+        <Link href="/donate" legacyBehavior>
           <PrimaryButton type="button" buttonText="Donate Now" />
         </Link>
       </section>

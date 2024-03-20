@@ -6,9 +6,9 @@ export default function Custom500() {
       <h1>500</h1>
       <p>
         <Link href="/">
-          <a>Go to home page</a>
+          Go to home page
         </Link>
       </p>
     </section>
-  )
+  );
 }

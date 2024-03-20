@@ -23,8 +23,8 @@ interface StyledLinkProps {
 
 export default function StyledLink({ href, children }: StyledLinkProps) {
 	return (
-		<LazyMotion features={domAnimation}>
-			<Link href={href} passHref>
+        <LazyMotion features={domAnimation}>
+			<Link href={href} passHref legacyBehavior>
 				<m.a
 					initial="initial"
 					whileHover="hover"
@@ -54,5 +54,5 @@ export default function StyledLink({ href, children }: StyledLinkProps) {
 				</m.a>
 			</Link>
 		</LazyMotion>
-	)
+    );
 }

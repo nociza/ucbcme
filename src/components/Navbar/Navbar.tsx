@@ -24,15 +24,15 @@ export default function Navbar() {
             aria-label="Main menu"
           >
             <Link href="/" passHref className="flex w-2/5">
-              <a className="inline-flex items-center outline-none focus:ring-4 focus:ring-secondary-light rounded-xl">
-                <Image
-                  width={48}
-                  height={48}
-                  src="/bcme.svg"
-                  alt="Rise Above The Disorders logomark. A brain with a heart in the center."
-                />
-                <p className="text-3xl font-medium cursor-pointer">bcme</p>
-              </a>
+
+              <Image
+                width={48}
+                height={48}
+                src="/bcme.svg"
+                alt="Rise Above The Disorders logomark. A brain with a heart in the center."
+              />
+              <p className="text-3xl font-medium cursor-pointer">bcme</p>
+
             </Link>
             <Popover.Button
               className="inline-flex items-center justify-center p-2 bg-white rounded-md md:hidden"
@@ -121,7 +121,7 @@ export default function Navbar() {
                                   key={supportpage.name}
                                   className="flow-root"
                                 >
-                                  <Link href={supportpage.href} passHref>
+                                  <Link href={supportpage.href} passHref legacyBehavior>
                                     <Popover.Button
                                       as="a"
                                       onClick={() => close()}
@@ -157,7 +157,7 @@ export default function Navbar() {
                   </>
                 )}
               </Popover>
-              <Link href="/donate" passHref>
+              <Link href="/donate" passHref legacyBehavior>
                 <button className="relative z-30 px-4 py-2 text-sm font-semibold text-white duration-200 shadow-xl outline-none bg-rad rounded-xl focus:ring-4 ring-secondary-light hover:shadow-none hover:bg-black/20 hover:bg-blend-overlay">
                   Donate
                 </button>
@@ -181,18 +181,18 @@ export default function Navbar() {
             >
               <div className="flex justify-between">
                 <div className="flex w-2/5">
-                  <Link href="/" passHref>
-                    <a className="inline-flex items-center rounded-md">
-                      <Image
-                        width={48}
-                        height={48}
-                        src="/bcme.svg"
-                        alt="BCME logo mark, a Pipa designed with the letters BCME."
-                      />
-                      <p className="text-3xl font-medium text-white cursor-pointer">
-                        BCME
-                      </p>
-                    </a>
+                  <Link href="/" passHref className="inline-flex items-center rounded-md">
+
+                    <Image
+                      width={48}
+                      height={48}
+                      src="/bcme.svg"
+                      alt="BCME logo mark, a Pipa designed with the letters BCME."
+                    />
+                    <p className="text-3xl font-medium text-white cursor-pointer">
+                      BCME
+                    </p>
+
                   </Link>
                 </div>
                 <Popover.Button className="inline-flex items-center justify-center p-2 bg-white rounded-md outline-none focus:bg-red-light focus:ring-4 focus:ring-inset">
@@ -229,7 +229,7 @@ export default function Navbar() {
                   })}
                 </div>
                 <div>
-                  <Link href="/donate" passHref>
+                  <Link href="/donate" passHref legacyBehavior>
                     <div>
                       <PrimaryButton
                         onClick={() => close()}
@@ -240,7 +240,7 @@ export default function Navbar() {
                     </div>
                   </Link>
                 </div>
-                <Link href="/performances" passHref>
+                <Link href="/performances" passHref legacyBehavior>
                   <div className="rounded-xl">
                     <button
                       className="relative w-full px-3 py-2 text-base font-bold bg-white border-2 border-black rounded-xl"
