@@ -24,7 +24,7 @@ export default function Stream() {
             </span>
           </h1>
         </header>
-        <Link href="https://tiltify.com/anxiety-gaming">
+        <Link href="https://tiltify.com/anxiety-gaming" legacyBehavior>
           <div className="w-full max-w-md">
             <PrimaryButton type="button" buttonText="Plan Your Stream" />
           </div>
@@ -65,7 +65,7 @@ export default function Stream() {
         ))}
       </div>
     </div>
-  )
+  );
 }
 
 export const InfoCardData = [

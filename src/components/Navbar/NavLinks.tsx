@@ -11,7 +11,7 @@ interface NavLinkProps {
 
 export default function NavLink({ children, href, subItem, onClick }: NavLinkProps) {
 	return (
-		<Link href={href} passHref>
+        <Link href={href} passHref legacyBehavior>
 			<button
 				onClick={onClick}
 				className={`relative z-30 p-2 text-sm font-semibold outline-none rounded-xl focus:ring-4 focus:ring-secondary-light hover:bg-black hover:text-white focus-within:text-white focus-within:bg-black ${
@@ -22,5 +22,5 @@ export default function NavLink({ children, href, subItem, onClick }: NavLinkPro
 				{children}
 			</button>
 		</Link>
-	)
+    );
 }

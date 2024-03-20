@@ -4,7 +4,7 @@ import FooterNewsletter from "./FooterNewsletter";
 import Link from "next/link";
 import Image from "next/image";
 import { footerPages } from "@data/PageLinks";
-import { DiscordIcon, TwitchIcon } from "./FooterIcons";
+import { DiscordIcon } from "./FooterIcons";
 
 export default function Footer() {
   const elemRef = useRef<HTMLDivElement>(null);
@@ -29,10 +29,13 @@ export default function Footer() {
 
       <nav className="flex flex-wrap items-center justify-center max-w-lg pt-8 pb-4 mx-auto space-x-2">
         {footerPages.map((page) => (
-          <Link href={page.href} key={page.name} passHref>
-            <a className="p-2 outline-none hover:text-secondary-dark focus:ring-4 focus:ring-secondary-light rounded-xl">
-              {page.name}
-            </a>
+          <Link
+            href={page.href}
+            key={page.name}
+            passHref
+            className="p-2 outline-none hover:text-secondary-dark focus:ring-4 focus:ring-secondary-light rounded-xl"
+          >
+            {page.name}
           </Link>
         ))}
       </nav>

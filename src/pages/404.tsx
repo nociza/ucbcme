@@ -6,7 +6,7 @@ export default function Custom400() {
       <h1>Sorry, Page not found</h1>
       <p>
         <Link href="/">
-          <a>Go to home page</a>
+          Go to home page
         </Link>
       </p>
     </section>
