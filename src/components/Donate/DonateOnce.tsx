@@ -5,7 +5,6 @@ import { trpc } from "@libs/trpc";
 import PrimaryButton from "@components/PrimaryButton";
 import DonateCustomInput from "./DonateCustomInput";
 import AppRadioGroup from "./AppRadioGroup";
-import PayPalButton from "@components/PayPalButton";
 import Checkbox from "@components/Checkbox";
 import UncontrolledInput from "@components/UnControlledInput";
 import classNames from "@utils/classNames";
@@ -48,9 +47,11 @@ export default function DonateOnce() {
   const [customAmount, setCustomAmount] = useState<number | undefined>(
     undefined
   );
+
   const selectedOption = customAmount
     ? {
-        priceId: customAmount * 100,
+        priceId: "custom",
+        value: customAmount,
         message: ` will cover ${Math.floor(
           customAmount / 5000
         )} concerts in Herz Hall.`,
@@ -119,7 +120,7 @@ export default function DonateOnce() {
           <p className="col-span-3">
             Your donation of{" "}
             <span className="font-bold">
-              {"$" + (selectedOption.priceId / 100).toFixed(0)}
+              {"$" + (selectedOption.value / 100).toFixed(0)}
             </span>
             {selectedOption.message}
           </p>
@@ -188,10 +189,6 @@ export default function DonateOnce() {
           buttonText={isLoading ? "Loading" : "Donate Now"}
           type="submit"
           disabled={isLoading}
-        />
-        <PayPalButton
-          key={selectedOption.priceId}
-          donationValue={selectedOption.priceId / 100}
         />
       </form>
     </>
