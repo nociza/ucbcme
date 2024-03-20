@@ -1,4 +1,3 @@
-import dynamic from "next/dynamic";
 import { useRef } from "react";
 import useIsVisible from "@utils/hooks/useIsVisable";
 import FooterNewsletter from "./FooterNewsletter";
@@ -23,8 +22,8 @@ export default function Footer() {
         </span>
       </h2>
       <p className="mt-2 mb-4">
-        Subscribe to our newsletter and stay updated on our mission to make
-        mental health care accessible to everyone.
+        Subscribe to our newsletter and stay updated on our latest events and
+        announcements.
       </p>
       <FooterNewsletter />
 
@@ -41,28 +40,17 @@ export default function Footer() {
       <div className="flex justify-center space-x-4">
         <a
           className="outline-none focus:ring-4 focus:ring-secondary-light rounded-xl"
-          href="https://www.discord.gg/youarerad"
+          href="https://discord.gg/TwHzEkjfaR"
         >
           <DiscordIcon />
         </a>
         <a
           className="outline-none focus:ring-4 focus:ring-secondary-light rounded-xl"
-          href="https://www.instagram.com/riseabovethedisorder/"
+          href="https://www.instagram.com/bcme.berkeley/"
         >
           <Image
-            alt="RAD's Instagram page."
+            alt="BCME's Instagram page."
             src="/icons/Instagram.svg"
-            width={32}
-            height={32}
-          />
-        </a>
-        <a
-          className="outline-none focus:ring-4 focus:ring-secondary-light rounded-xl"
-          href="https://twitter.com/YouAreRAD"
-        >
-          <Image
-            alt="RAD's Twitter page"
-            src="/icons/Twitter.svg"
             width={32}
             height={32}
           />
