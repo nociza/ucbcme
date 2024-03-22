@@ -16,4 +16,4 @@ Our website is a collaborative effort, and we welcome any contributions to impro
 
 ## Credits
 
-This website was built on top of [You Are Rad](https://youarerad.com/), a nonprofit organization under the license of GNU GPLv3. The original repository can be found [here](https://github.com/youarerad/youareradweb).
+This website was built on top of [You Are Rad](https://youarerad.org/), a nonprofit organization under the license of GNU GPLv3. The original repository can be found [here](https://github.com/youarerad/youareradweb).
