@@ -50,7 +50,7 @@ export default function DonateOnce() {
 
   const selectedOption = customAmount
     ? {
-        priceId: "custom",
+        priceId: "price_1P3TF7EOaJbgl9NrXogiyK9Y",
         value: customAmount,
         message: ` will cover ${Math.floor(
           customAmount / 5000

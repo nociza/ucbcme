@@ -8,25 +8,10 @@ export default function Donationcomplete() {
   const date = new Date();
   const router = useRouter();
   const session_id = router.query["session_id"] as string;
-  const { ...contactRouter } = trpc.useMutation(["user.create-user"]);
-  const { data, status } = trpc.useQuery(
-    ["checkout.get-session", { session_id }],
-    {
-      onSuccess(data) {
-        contactRouter.mutate({
-          name: data.customer_details?.name as string,
-          email: data.customer_details?.email as string,
-          amount: data.amount_total as number,
-          customer_id: data.id,
-          honor: data.metadata?.onBehalfof as string,
-          message: data.metadata?.message as string,
-        });
-      },
-      staleTime: Infinity,
-      refetchOnReconnect: false,
-      refetchOnMount: false,
-    }
-  );
+  const { data, status } = trpc.useQuery([
+    "checkout.get-session",
+    { session_id },
+  ]);
   const onBehalf = data?.metadata?.onBehalfof as string;
   const donation = data?.amount_total;
   const donationString = donation ? Math.floor(donation / 100) : null;
@@ -42,7 +27,7 @@ export default function Donationcomplete() {
       <div>
         <section className="flex flex-col items-center justify-center text-center align-middle">
           <header>
-            <h1>Failed to load doantion.</h1>
+            <h1>Thank you for your donation!</h1>
           </header>
         </section>
       </div>
