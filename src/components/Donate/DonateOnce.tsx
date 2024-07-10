@@ -52,9 +52,9 @@ export default function DonateOnce() {
     ? {
         priceId: "price_1P3TF7EOaJbgl9NrXogiyK9Y",
         value: customAmount,
-        message: ` will cover ${Math.floor(
+        message: ` will cover ${
           customAmount / 5000
-        )} concerts in Herz Hall.`,
+        } entire concerts in Herz Hall.`,
       }
     : DonateOnceConfig[currentOption];
 
@@ -120,7 +120,10 @@ export default function DonateOnce() {
           <p className="col-span-3">
             Your donation of{" "}
             <span className="font-bold">
-              {"$" + (selectedOption.value / 100).toFixed(0)}
+              {"$" +
+                (customAmount
+                  ? selectedOption.value
+                  : (selectedOption.value / 100).toFixed(0))}
             </span>
             {selectedOption.message}
           </p>
