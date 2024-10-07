@@ -82,13 +82,17 @@ const Timer = () => {
     setProbabilities([]);
   };
 
+  const handleDismiss = () => {
+    setIsStopped(false);
+  };
+
   const yearLabels = probabilities.map((_, i) => (i * (80 / 240)).toFixed(1));
 
   const data = {
     labels: yearLabels,
     datasets: [
       {
-        label: "Mortality Rate",
+        label: "Mortality Rate Probability",
         data: probabilities,
         borderColor: "rgba(54, 162, 235, 1)",
         backgroundColor: "rgba(54, 162, 235, 0.5)",
@@ -106,7 +110,7 @@ const Timer = () => {
       },
       title: {
         display: true,
-        text: "Mortality Rate Over Time",
+        text: "Mortality Rate Probability Over Time",
       },
     },
     scales: {
@@ -130,8 +134,11 @@ const Timer = () => {
   return (
     <div className="relative h-screen w-full flex flex-col items-center justify-center">
       {isStopped && (
-        <div className="absolute inset-0 bg-red-700 opacity-90 flex items-center justify-center z-20">
-          <h1 className="text-white text-4xl font-bold">STOP</h1>
+        <div
+          className="absolute inset-0 bg-red-600 opacity-80 flex items-center justify-center z-20 cursor-pointer"
+          onClick={handleDismiss}
+        >
+          <h1 className="text-white text-5xl font-bold">STOP</h1>
         </div>
       )}
       <div className="relative z-10 text-center mb-8">
@@ -146,7 +153,7 @@ const Timer = () => {
       </div>
       <div
         className="relative z-10 w-3/4 mb-8 bg-white p-4 rounded-lg shadow-lg"
-        style={{ height: "400px" }}
+        style={{ height: "500px" }}
       >
         <Line data={data} options={options} />
       </div>
